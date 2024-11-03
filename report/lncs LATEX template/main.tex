@@ -31,7 +31,7 @@ Health Engineering. Málaga University.}
 
 Artificial intelligence (AI) has emerged as a transformative solution to numerous challenges in a wide range of domains, often being viewed as a key to simple and efficient problem-solving. However, the performance of AI models must be critically assessed to understand their real-world applicability and limitations. In particular, supervised learning algorithms are often used in classification tasks, where the performance of these models can be evaluated through specific metrics.
 
-In this work, we explore the key performance metrics derived from the \textit{confusion matrix} to assess and compare supervised learning models. These metrics include \textbf{Precision}, \textbf{Recall}, \textbf{Specificity}, \textbf{False Positive Rate}, \textbf{False Negative Rate}, \textbf{Accuracy}, \textbf{Spatial Accuracy}, \textbf{Jaccard Index}, and \textbf{F-measure}. These metrics are commonly used to provide a detailed view of a model’s performance across different dimensions. By understanding and comparing these metrics, we can gain insights into the strengths and weaknesses of the classification methods being evaluated.
+In this work, we explore the key performance metrics derived from the \textit{confusion matrix} to assess and compare supervised learning models. These metrics include \textbf{Precision}, \textbf{Recall}, \textbf{Specificity}, \textbf{False Positive Rate}, \textbf{False Negative Rate}, \textbf{Accuracy}, \textbf{Spatial Accuracy}, \textbf{Jaccard Index}, and \textbf{F-measure}. These metrics are commonly used to provide a detailed view of a model’s performance across different dimensions. By understanding and comparing these metrics, we can gain insights into the strengths and weaknesses of the classification methods being evaluated.\cite{Liu2023}
 
 In computational learning, applying classification algorithms to predict disease progression is critical for deriving meaningful insights from complex biomedical data. The primary focus of this project is to evaluate and compare the performance of several classification methods using a dataset relevant to disease classification. The analysis will focus on various aspects, including the dataset's class distribution, balance, and overall characteristics, and will use a range of well-established performance metrics.
 
@@ -307,6 +307,20 @@ Here, similar to other cases, method E only classifies all samples as false, obt
 
 Radar plots provide numerous advantages for visualizing data, particularly when comparing multiple variables. In this analysis  (see the Figure \ref{fig:radar}) , the FNR and FPR metrics were excluded because they are assessed in reverse: values closer to 1 indicate poorer performance, while values nearer to 0 represent better results. To enhance clarity, only metrics where higher values indicate better performance will be included in the radar plots.
 
+The radar plot (Figure \ref{fig:radar}) allows for several key observations:
+
+\begin{itemize}
+	\item \textbf{Method A} shows excellent \textit{recall}, achieving the highest score, but its performance is poor in all other metrics, such as precision, accuracy, and specificity. This suggests that while Method A captures all positive cases, it struggles to correctly identify negative ones.
+	
+	\item \textbf{Method B} presents a more balanced performance across all metrics. It performs well in \textit{recall} and has moderate precision and specificity, making it a more reliable option compared to Method A.
+	
+	\item \textbf{Methods C and D} stand out with a precision of 0.5, and they show strong overall performance in various metrics like accuracy and specificity, indicating these models maintain a reasonable balance between correctly identifying both positive and negative cases.
+	
+	\item \textbf{Method E}, having no true positive cases, naturally scores low in most metrics, with zero precision and recall.
+\end{itemize}
+
+The radar plot highlights the strengths and weaknesses of each method, visually illustrating the trade-offs between metrics. Methods B and D offer the best balance, while Method A, despite its high recall, performs poorly in other key metrics, demonstrating its limitations.
+
 
 \begin{figure}[h!]
 	\begin{center}  % Usamos el entorno 'center'
@@ -315,10 +329,43 @@ Radar plots provide numerous advantages for visualizing data, particularly when 
 		\label{fig:radar}
 	\end{center}
 \end{figure}
+  \vspace{-20pt}
  
-\section{Conclusions}
+ \section{Metrics Comparison}
  
-In this study, we conducted a comprehensive comparison of three clustering algorithms applied to a yeast sporulation dataset. The K-means algorithm, with K=2, demonstrated superior performance in terms of cluster compactness and separation, outperforming both hierarchical clustering and self-organizing maps. Nevertheless, each clustering method brings its own strengths and may perform better under different conditions or datasets. It is also crucial to consider the advancements in clustering methodologies and technology over time. By comparing our results to an older study, we observed that modern algorithms and computational power significantly enhance the quality of clustering outcomes, emphasizing the importance of continuous innovation in data analysis techniques.
+ In addition to analyzing all metrics at once, similar to bivariate analysis, we can highlight specific metrics for a more focused evaluation. By plotting methods on a 2-dimensional plane, where the x-axis represents one metric and the y-axis another, we can carefully assess the direct relationships between these values.
+ 
+ \subsection{False Negatives (FN) against False Positives (FP)}
+ 
+ It has already been observed that certain methods yield a high number of false negatives and false positives. Plotting both values on a 2-dimensional plane allows for a more intuitive visualization of which methods are performing better (see the figure \ref{fig:FPyFN}). The closer the methods are to the origin (0,0) — having fewer false positives and false negatives — the more ideal they are.
+
+\begin{figure}[h!]
+	\begin{center}  % Usamos el entorno 'center'
+		\includegraphics[width=0.49\textwidth]{images/FN_VS_FP.png}
+		\caption{FN vs. FP for each method.}
+		\label{fig:FPyFN}
+	\end{center}
+\end{figure}
+
+As it has been a constant in the work methods A and E gave terrible results for the reasons already explained. And the methods B and D stand out positively as expected. 
+
+This visualization is important because false positives (FP) and false negatives (FN) directly impact the overall performance of a classifier. A method that minimizes both types of errors is considered optimal, especially in critical applications like medical diagnosis, where both kinds of mistakes can lead to significant consequences.
+
+\subsection{Precision (PR) against Recall (RC)}
+
+A Precision vs. Recall plot provides insight into the trade-off between these two metrics (see Figure \ref{fig:PRyRC}), improving precision leads to lower recall, and vice versa. This visualization is particularly valuable when dealing with imbalanced classes. By observing the balance between precision and recall, one can determine the optimal threshold that best balances both metrics, allowing for model performance adjustments based on the specific needs of the task.
+
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{images/PR_RC.png}
+		\caption{PR vs. RC for each method.}
+		\label{fig:PRyRC}
+	\end{center}
+\end{figure}
+
+The most ideal position for a method is close to the point (1,1), indicating high precision and high recall. Method B stands out as the best performing, achieving a balanced high value for both metrics, while method E performs poorly, as expected from previous observations.
+
 
 \bibliographystyle{plain}  % Puedes cambiar "plain" por el estilo de tu preferencia, como apalike, ieeetr, etc.
 \bibliography{bibliography}  % Aquí va el nombre de tu archivo .bib (sin la extensión .bib)

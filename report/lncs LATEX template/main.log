@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.27)  3 NOV 2024 03:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.27)  3 NOV 2024 19:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -437,34 +437,44 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <images/radar_plot.png, id=33, 580.3281pt x 498.663pt>
 File: images/radar_plot.png Graphic file (type png)
 <use images/radar_plot.png>
-Package pdftex.def Info: images/radar_plot.png  used on input line 313.
+Package pdftex.def Info: images/radar_plot.png  used on input line 327.
 (pdftex.def)             Requested size: 234.8775pt x 201.82805pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-(main.bbl
 
-LaTeX Warning: Empty `thebibliography' environment on input line 3.
-
-)
 
 [6]
+<images/FN_VS_FP.png, id=37, 614.295pt x 395.3169pt>
+File: images/FN_VS_FP.png Graphic file (type png)
+<use images/FN_VS_FP.png>
+Package pdftex.def Info: images/FN_VS_FP.png  used on input line 344.
+(pdftex.def)             Requested size: 230.18253pt x 148.12885pt.
 
-[7 <./images/radar_plot.png>] (main.aux)
+
+[7 <./images/radar_plot.png> <./images/FN_VS_FP.png>]
+<images/PR_RC.png, id=44, 611.4042pt x 395.3169pt>
+File: images/PR_RC.png Graphic file (type png)
+<use images/PR_RC.png>
+Package pdftex.def Info: images/PR_RC.png  used on input line 361.
+(pdftex.def)             Requested size: 281.85587pt x 182.24608pt.
+ (main.bbl)
+
+[8 <./images/PR_RC.png>] (main.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-30>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3297 strings out of 473899
- 54592 string characters out of 5722216
- 455666 words of memory out of 5000000
- 26129 multiletter control sequences out of 15000+600000
- 563137 words of font info for 54 fonts, out of 8000000 for 9000
+ 3316 strings out of 473899
+ 54983 string characters out of 5722216
+ 455697 words of memory out of 5000000
+ 26147 multiletter control sequences out of 15000+600000
+ 563482 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 59i,9n,67p,810b,282s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 59i,9n,67p,757b,280s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Diego De Pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmbx10.pfb><C:/Users/Diego De Pablo/AppData/Local/Programs/MiKTeX/font
 s/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Diego De Pablo/AppData/Local/Pr
@@ -475,11 +485,12 @@ ers/Diego De Pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
 ublic/amsfonts/cm/cmr9.pfb><C:/Users/Diego De Pablo/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Diego De Pablo/AppData/L
 ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Diego 
-De Pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb
->
-Output written on main.pdf (7 pages, 497410 bytes).
+De Pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb
+><C:/Users/Diego De Pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmtt9.pfb>
+Output written on main.pdf (8 pages, 549698 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
+ 92 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
