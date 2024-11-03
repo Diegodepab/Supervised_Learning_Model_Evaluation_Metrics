@@ -7,6 +7,7 @@
 \usepackage{booktabs}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath} 
+\usepackage{hyperref}
 
 
 \begin{document}
@@ -365,6 +366,37 @@ A Precision vs. Recall plot provides insight into the trade-off between these tw
 \end{figure}
 
 The most ideal position for a method is close to the point (1,1), indicating high precision and high recall. Method B stands out as the best performing, achieving a balanced high value for both metrics, while method E performs poorly, as expected from previous observations.
+
+
+\subsection{Accuracy (ACC) vs. F-measure (Fm)}
+
+Analyzing an Accuracy versus F-measure plot allows one to assess how well a classification model performs by considering its overall correctness (accuracy) and its effectiveness in identifying true positives (F-measure). Accuracy, defined as the proportion of correct predictions out of the total predictions, can be a misleading measure in imbalanced datasets where one class is more prevalent, as it tends to inflate the performance of models that prioritize the dominant class. Conversely, F-measure (F1 score) balances precision and recall, reflecting the model’s capability to correctly identify instances of the positive class, which is crucial in cases where the positive class is of particular interest.
+
+By examining the relationship between these two metrics, one can identify models that not only perform well in terms of accuracy but also maintain a good balance in detecting true positives. This type of analysis helps to discern models that offer meaningful and reliable performance, especially in practical applications where the accurate detection of specific classes is critical. As shown in Figure \ref{fig
+}, certain methods such as B and D demonstrate both high accuracy and high F-measure, indicating a balanced and effective performance. Meanwhile, Method E, despite its high accuracy, has a relatively low F-measure, suggesting it may be failing to identify positive instances adequately, potentially by overclassifying them as erroneous. This reinforces the importance of F-measure in identifying models that can capture the nuances of the positive class rather than merely achieving high overall accuracy.
+
+\begin{figure}[h!] \begin{center} \includegraphics[width=0.6\textwidth]{images/ACC_VS_Fm.png} \caption{ACC vs. Fm for each method.} \label{fig
+} \end{center} \end{figure}
+
+
+\section{Conclusion}
+In this study, we compared five classification methods (A, B, C, D, and E) using various performance metrics to assess their effectiveness in handling an imbalanced dataset, particularly for disease prediction. The analysis revealed differences in performance across precision, recall, and F-measure, with Method B standing out as the most balanced.
+
+\begin{itemize}
+	\item \textbf{Method B:} This method provides the best overall balance between precision, recall, and F-measure, making it the most robust option for applications that demand both accurate positive identification and high precision.
+	
+	\item \textbf{Methods A and E:} Both methods show negligible classification capability. Method A predicts only positives, while Method E predicts only negatives, making them ineffective for distinguishing between classes. Their extreme limitations offer no practical value in balanced classification tasks.
+	
+	\item \textbf{Method C:} This method strikes a moderate balance between precision and specificity. However, its performance is hampered by a significantly high false negative rate, preventing it from reaching the robustness of Method B.
+	
+	\item \textbf{Method D:} Although this method ranks as the second-best performer, its higher false negative rate compared to Method B reduces its overall effectiveness.
+\end{itemize}
+
+\textbf{Method B:} is the most effective classification method for this imbalanced dataset due to its high F-measure and balanced precision and recall. It is recommended for predictive tasks where accurate positive identification and minimizing false positives are critical, even in the context of an imbalanced dataset. Also in a health context, method B is the one that stands out the most because it obtains almost all positive cases, where in disease studies it is very important to maximize the number of true positives.
+
+\section{Repository Github}
+Further information, including the source code and full project documentation, can be accessed through the GitHub repository.  \href{https://github.com/Diegodepab/Supervised_Learning_Model_Evaluation_Metrics}{Click here to go to the repository.} 
+
 
 
 \bibliographystyle{plain}  % Puedes cambiar "plain" por el estilo de tu preferencia, como apalike, ieeetr, etc.
