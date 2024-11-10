@@ -1,9 +1,62 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
-\bibitem{Liu2023}
-S.~Liu, F.~Roemer, Y.~Ge, et~al.
-\newblock Comparison of evaluation metrics of deep learning for imbalanced
-  imaging data in osteoarthritis studies.
-\newblock {\em Osteoarthritis and Cartilage}, 31(9):1242--1248, 2023.
+\bibitem{aiml2024}
+Karphatij Andrej.
+\newblock What is the basic architecture of an artificial neural network
+  (ann)?, 2024.
+\newblock Accessed: 2024-11-10.
+
+\bibitem{alphafold2024}
+EMBL-EBI.
+\newblock Alphafold, 2024.
+\newblock Accessed: 2024-11-10.
+
+\bibitem{Goodfellow}
+Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
+\newblock {\em Deep Learning}.
+\newblock MIT Press, 2016.
+\newblock Comprehensive introduction to deep learning, covering theory and
+  practice.
+
+\bibitem{Hastie2009}
+Trevor Hastie, Robert Tibshirani, and Jerome Friedman.
+\newblock {\em The Elements of Statistical Learning: Data Mining, Inference,
+  and Prediction}.
+\newblock Springer, 2 edition, 2009.
+\newblock A foundational text on machine learning and statistical modeling,
+  covering supervised learning and model evaluation techniques such as
+  cross-validation.
+
+\bibitem{train}
+Built In.
+\newblock What is the train-test split and why is it important?, 2024.
+\newblock Accessed: 2024-11-10.
+
+\bibitem{LeCun2015}
+Yann LeCun, Yoshua Bengio, and Geoffrey Hinton.
+\newblock Deep learning.
+\newblock {\em Nature}, 521(7553):436--444, 2015.
+\newblock Seminal paper that provides an overview of the field of deep
+  learning, including key advances and applications.
+
+\bibitem{overfittingprotecciondatos}
+Protección~Datos LOPD.
+\newblock ¿qué es el overfitting en el aprendizaje automático?, 2024.
+\newblock Accessed: 2024-11-10.
+
+\bibitem{kili}
+Kili Technology.
+\newblock Cross-validation in machine learning, 2024.
+\newblock Accessed: 2024-11-10.
+
+\bibitem{turing}
+Turing.
+\newblock Deep learning vs machine learning: The ultimate battle, 2024.
+\newblock Accessed: 2024-11-10.
+
+\bibitem{alphafoldpaperswithcode}
+Papers with Code.
+\newblock Alphafold, 2024.
+\newblock Accessed: 2024-11-10.
 
 \end{thebibliography}
